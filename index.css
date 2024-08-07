@@ -1,0 +1,412 @@
+/*구글폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+
+/*전체 공통 사항*/
+
+*{
+    font-family: "Noto Sans KR", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+}
+
+ul{list-style: none; padding: 0;}
+a{text-decoration: none;}
+
+
+
+/*네비게이션 영역-------------------------------------*/
+
+#navbox{
+    width: 100%;
+    height: 70px;
+    background: #11263c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+#navinbox{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#logobox{
+    /* border: 1px solid red; */
+    width: 30%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+#navi{width: 70%;}
+
+#menu{
+    /* border: 1px solid ; */
+    display: flex;
+    justify-content: space-around;
+    height: 70px;
+}
+
+.main>a{
+    /* border: 1px solid yellow; */
+    width: 100%;
+    line-height: 70px;
+    padding: 0 2rem;
+    color: rgba(255,255,255,.6);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    display: block;
+    position: relative;
+    transition: .2s;
+}
+
+.main>a::after{
+    /* border: 1px solid red; */
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 0;
+    height: 5px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s;
+}
+
+.main>a:hover{color: #fff;}
+.main>a:hover::after{width: 100%;}
+
+
+
+/*헤더 영역 -----------------------------------------*/
+
+#header{
+    /* border: 1px solid yellow; */
+    width: 100%;
+    height: 90vh;
+    background: #11263c;
+    position: relative;
+    top: 70px;
+}
+
+.title1{
+    /* border: 1px solid red; */
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#imgbox{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+/*섹션 1 영역 --------------------------------------------*/
+
+#sec1{
+    /* border: 1px solid yellow; */
+    width: 100%;
+    height: 70%;
+    margin-top: 5rem;
+}
+
+#title2{
+    /* border: 1px solid red; */
+    width: 100%;
+    max-width: 1200px;
+    margin: 8rem auto 3rem auto;
+    text-align: center;
+}
+
+#title2>a>h1{
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #333;
+}
+
+#listbox{
+    /* border: 1px solid red; */
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+
+.list{
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.list img{width: 100%; display: block;}
+
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,.6);
+    z-index: 8;
+    opacity: 0;
+    transition: .3s;
+}
+
+.caption{
+    /* border: 1px solid blue; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 9;
+    opacity: 0;
+    transition: .3s;
+}
+
+.caption>h3{
+    /* border: 1px solid red; */
+    font-size: 2rem;
+    width: 100%;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.btn1{
+    /* border: 1px solid red; */
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: lighter;
+    text-transform: capitalize;
+    padding: .4rem 1rem;
+    border: none;
+    border-radius: 30px;
+    background: #336faf;
+    opacity: .6;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.list:hover .box{opacity: 1;}
+
+.list:hover .caption{opacity: 1;}
+
+.btn1:hover{opacity: 1;}
+
+
+/*섹션 2 영역 ------------------------------------------------*/
+
+#sec2{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+#title3{
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto 2rem auto;
+}
+
+#title3>a>h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #333;
+}
+
+.contactbox{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contactinbox{
+    /* border: 1px solid red; */
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    width: 100%;
+}
+
+.input{
+    border: 1px solid #999;
+    border-radius: 10px;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.input1{
+    width: 100%;
+    padding: .5rem;
+}
+
+.input2{
+    width: 100%;
+    padding: .5rem;
+}
+
+/*푸터 영역 --------------------------------------------------------*/
+
+#foot{
+    width: 100%;
+    height: 45vh;
+    background: #11263c;
+}
+
+#inbox{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+}
+
+
+/*2번째 네비게이션-----------*/
+
+#navi2{
+    /* border: 1px solid white; */
+    width: 100%;
+    height: 50px;
+    margin: 1.5rem auto;
+}
+
+#menu2{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main2{
+    width: 20%;
+    text-align: center;
+}
+
+.main2>a{
+    position: relative;
+    padding: .3rem;
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 50px;
+    opacity: .8;
+    transition: .3s;
+}
+
+.main2>a:hover{opacity: 1;}
+
+.main2>a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.main2>a:hover::after{width: 100%;}
+
+/*아이콘 박스 --------*/
+
+.iconbox{
+    width: 50%;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.icon1{
+    font-size: 2rem;
+    color: #fff;
+    margin-left: 2rem;
+}
+
+
+/*저작권 박스--------*/
+.copyright{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+}
+
+/*미니 네비게이션---*/
+#navi3{
+    width: 100%;
+    margin: 1rem auto;
+}
+
+#minimenu{
+    display: flex;
+    text-align: center;
+}
+
+#minimenu p{color: #fff;}
+
+.sub{
+    width: 100%;
+}
+
+.sub>a{
+    color: #fff;
+    text-transform: capitalize;
+    opacity: .6;
+    font-weight: lighter;
+    transition: .2s;
+}
+
+.sub>a:hover{opacity: 1;}
+
+/*로고 박스----*/
+.logobox{
+    /* border: 1px solid yellow; */
+    width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
