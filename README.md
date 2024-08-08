@@ -1,4 +1,4 @@
-데모 사이트: https://poetic-axolotl-d56ed5.netlify.app
+데모 사이트: https://poetic-axolotl-d56ed5.netlify.app(https://66b446edcf2c55879f4fae76--teal-mousse-8cf08a.netlify.app/)
 
 공연 기획사 AEG presents 홈페이지
 학원 실습용(네비+헤더+섹션2+푸터) 기준
