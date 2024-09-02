@@ -1,0 +1,44 @@
+
+
+#video{
+		/*화면 가운데 맞춤*/ 
+		position: fixed;
+		top: 50%;  left: 50%;
+		transform:translate(-50%,-50%);
+
+		/*최소 크기를 화면에 맞춰 Full Screen으로 만듦*/
+		min-width: 100%; min-height: 100%; 
+
+			/*배경으로 사용할 수 있도록 맨 하단으로 배치 위함*/
+}
+
+#text{
+    z-index: 5;
+}
+
+
+.hi{
+    position: absolute;
+    top: 15%;
+    padding-left: 4rem;
+    font-size: 3rem;
+    font-style: normal;
+    color: #1E402D;
+    animation: text 1s 1s both;
+}
+
+.say{
+    position: absolute;
+    top: 23%;
+    padding-left: 4rem;
+    font-size: 3rem;
+    font-style: normal;
+    color: #1E402D;
+    animation: text 1s 1.5s both;
+}
+
+
+@keyframes text{
+    from{transform: translateY(100%); opacity: 0;}
+    to{tranform: translateY(-100%); opacity: 1;}
+}

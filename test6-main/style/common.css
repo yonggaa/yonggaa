@@ -1,0 +1,149 @@
+/*
+컬러
+1E402D 진초록
+A64E5E 버건디
+A68B81 베이지
+F2E8DF 크림
+2A593E 중간 초록
+*/
+
+
+/*구글폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap');
+
+
+/*공통사항*/
+
+* {
+    font-family: "Libre Baskerville", serif;
+    font-style: italic;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*왼쪽 박스*/
+#leftBox {
+    width: 400px;
+    height: 100vh;
+    background: #1E402D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+#header {
+    /* border: 1px solid white; */
+    width: 100%;
+    height: 30%;
+    margin: 1rem;
+}
+
+
+#header img {
+    margin: 1.3rem 1rem .2rem 1rem;
+}
+
+#header h1 {
+    width: 100%;
+    margin-left: 2rem;
+    color: #A68B81;
+    font-weight: 300;
+}
+
+
+#navi {
+    /* border: 1px solid white; */
+    width: 100%;
+    height: 60%;
+    position: relative;
+}
+
+#menu {
+    /* border: 1px solid yellow; */
+    text-align: right;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 6rem;
+    padding: 2rem;
+}
+
+.main>a {
+    display: block;
+    color: #A68B81;
+    font-size: 1.6rem;
+    margin: .5rem 1rem;
+    padding: .8rem;
+    position: relative;
+    transition: .3s;
+    z-index: 99;
+}
+
+.main>a::after {
+    content: "";
+    position: absolute;
+    background: #A64E5E;
+    width: 0;
+    height: 80%;
+    bottom: 6px;
+    right: 0;
+    z-index: -9;
+    transition: .3s;
+}
+
+
+.main>a:hover::after {
+    width: 100%;
+}
+
+.main>a:hover {
+    color: #F2E8DF;
+}
+
+#textBox {
+    /* border: 1px solid red; */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 30px;
+    text-align: right;
+    padding: 1rem 2rem;
+    color: #A68B81;
+    display: flex;
+}
+
+#textBox>p:first-child {
+    margin-right: 1rem;
+}
+
+/*메인 화면 영역*/
+
+#rightBox {
+    margin-left: 400px;
+    background: #F2E8DF;
+    height: 100vh;
+    width: calc(100vw - 400px);
+    position: relative;
+}
+
+.a11y_hidden {
+    width: 1;
+    height: 1;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}

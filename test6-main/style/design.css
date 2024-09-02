@@ -1,0 +1,134 @@
+#rightBox{
+    /* border: 1px solid red; */
+    width: 1503px;
+    height: 1500px;
+    padding: 1rem;
+}
+
+.bg{
+    /* border: 1px solid red; */
+    z-index: 9;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: .8;
+    width: 50%;
+}
+
+#title{
+    width: 90%;
+    display: block;
+    font-size: 2.5rem;
+    margin: 1.5rem 0 1.5rem 3.5rem;
+    color: #1E402D;
+    position: relative;
+    z-index: 3;
+}
+
+#title::after{
+    content: "";
+    width: 85%;
+    height: 1px;
+    background: #2A593E;
+    opacity: .5;
+    position: absolute;
+    right: 2rem;
+    bottom: 20px;
+    z-index: -1;
+}
+
+.list{
+    /* border: 1px solid black; */
+    display: flex;
+    margin-left: 1rem;
+    border-bottom: 1px dashed #ccc;
+    padding: 2rem;
+    width: 90%;
+    height: 380px;
+    overflow-y: auto;
+}
+
+.img{
+    width: 40%;
+    cursor: pointer;
+}
+
+.img1{
+    background-image: url('../images/chill.png');
+    background-size: cover;
+}
+
+.captionBox{
+    /* border: 1px solid red; */
+    width: 40%;
+    padding: 4rem;
+}
+
+.captionBox>h2{
+    font-family: "Noto Sans KR", sans-serif;
+    font-style: normal;
+    margin-bottom: 1rem;
+}
+
+.captionBox>p{
+    font-family: "Noto Sans KR", sans-serif;
+    font-style: normal;
+}
+
+.view{
+    font-family: "Noto Sans KR", sans-serif;
+    font-style: italic;
+
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    border: none;
+    background: #2A593E;
+    color: #F2E8DF;
+    text-transform: uppercase;
+    padding: .4rem .8rem;
+    border-radius: 3px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.view:hover{
+    background: #1E402D;
+}
+
+
+
+/*팝업창*/
+#modal1, #modal2, #modal3, #modal{
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#modalContent1, #modalContent2, #modalContent3{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-45%);
+    height: 95%;
+    overflow-y: auto;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%; */
+}
+
+#modalClose1, #modalClose2, #modalClose3{
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: #fff;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+}
